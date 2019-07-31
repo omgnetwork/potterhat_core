@@ -19,9 +19,6 @@ defmodule PotterhatCore.MixProject do
     [
       app: :potterhat_core,
       version: "0.1.0",
-      build_path: "../../_build",
-      deps_path: "../../deps",
-      lockfile: "../../mix.lock",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env() == :prod,
