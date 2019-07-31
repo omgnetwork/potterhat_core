@@ -1,4 +1,4 @@
-defmodule PotterhatCore.PotterhatClient do
+defmodule PotterhatCore.ExthereumClient do
   @moduledoc """
   The Potterhat client for Ethereumex.
   """
