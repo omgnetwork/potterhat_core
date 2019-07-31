@@ -17,6 +17,8 @@ defmodule PotterhatCore.Application do
   use Application
 
   def start(_type, _args) do
+    _ = DeferredConfig.populate(:potterhat_core)
+
     children = [PotterhatCore.ActiveNodes | nodes()]
 
     opts = [strategy: :one_for_one, name: PotterhatCore.Supervisor]

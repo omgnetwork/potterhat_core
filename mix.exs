@@ -38,6 +38,7 @@ defmodule PotterhatCore.MixProject do
 
   defp deps do
     [
+      {:deferred_config, "~> 0.1.0"},
       {:ethereumex, "~> 0.5"},
       {:jason, "~> 1.1"},
       {:telemetry, "~> 0.4.0"},
