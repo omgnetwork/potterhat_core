@@ -101,7 +101,7 @@ jobs:
 
 
 workflows:
-  build_deploy:
+  build_lint_test:
     jobs:
       - build:
           filters: &all_branches
