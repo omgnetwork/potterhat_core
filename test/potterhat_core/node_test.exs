@@ -14,7 +14,7 @@
 
 defmodule PotterhatCore.NodeTest do
   use ExUnit.Case, async: true
-  import PotterhatCore.Node.EthereumTestHelper
+  import PotterhatCore.EthereumTestHelper
   alias PotterhatCore.Node
   alias PotterhatCore.Node.RPCResponse
   alias PotterhatCore.NodeConfig

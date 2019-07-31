@@ -12,15 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-defmodule PotterhatElixir.MixProject do
+defmodule PotterhatCore.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :potterhat_elixir,
+      app: :potterhat_core,
       version: "0.1.0",
       build_path: "../../_build",
-      config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
       elixir: "~> 1.8",
@@ -32,7 +31,7 @@ defmodule PotterhatElixir.MixProject do
 
   def application do
     [
-      extra_applications: [:logger]
+      mod: {PotterhatCore.Application, []}
     ]
   end
 
@@ -44,9 +43,10 @@ defmodule PotterhatElixir.MixProject do
     [
       {:ethereumex, "~> 0.5.4"},
       {:jason, "~> 1.1"},
-      {:potterhat_rpc, in_umbrella: true},
       {:telemetry, "~> 0.4.0"},
       {:websockex, "~> 0.4.0"},
+      # Used for mocking websocket servers
+      {:plug_cowboy, "~> 2.0", only: :test}
     ]
   end
 end
