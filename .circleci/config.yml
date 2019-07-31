@@ -29,7 +29,7 @@ jobs:
       - run: |
           mkdir -p ~/var
           elixir --version | tee ~/var/elixir-version
-      - run: make build-test
+      - run: make build
       - persist_to_workspace:
           name: Persist workspace
           root: ~/
