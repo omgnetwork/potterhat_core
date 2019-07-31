@@ -105,7 +105,7 @@ defmodule PotterhatCore.Node do
         {:noreply, %{state | state: :started, event_listener: pid}}
 
       {:error, error} ->
-        retry_interval_ms = Application.get_env(:potterhat_node, :retry_interval_ms, @default_retry_interval_ms)
+        retry_interval_ms = Application.get_env(:potterhat_core, :retry_interval_ms, @default_retry_interval_ms)
 
         _ =
           Logger.warn(

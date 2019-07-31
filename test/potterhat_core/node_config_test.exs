@@ -18,13 +18,13 @@ defmodule PotterhatCore.NodeConfigTest do
 
   describe "all/0" do
     test "returns the node configs" do
-      assert NodeConfig.all() == Application.get_env(:potterhat_node, :nodes, [])
+      assert NodeConfig.all() == Application.get_env(:potterhat_core, :nodes, [])
     end
   end
 
   describe "count/0" do
     test "returns the node configs" do
-      assert NodeConfig.count() == length(Application.get_env(:potterhat_node, :nodes, []))
+      assert NodeConfig.count() == length(Application.get_env(:potterhat_core, :nodes, []))
     end
   end
 end
