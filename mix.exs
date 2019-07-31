@@ -38,7 +38,7 @@ defmodule PotterhatCore.MixProject do
 
   defp deps do
     [
-      {:ethereumex, "~> 0.5.4"},
+      {:ethereumex, "~> 0.5"},
       {:jason, "~> 1.1"},
       {:telemetry, "~> 0.4.0"},
       {:websockex, "~> 0.4.0"},
